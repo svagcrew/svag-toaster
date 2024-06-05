@@ -1,6 +1,6 @@
 import type React from 'react'
 import type { ToasterProps, ToastOptions } from 'react-hot-toast'
-import toastNative, { Toaster as ToasterNative } from 'react-hot-toast'
+import { toast as toastNative, Toaster as ToasterNative } from 'react-hot-toast'
 
 type SvagToastProps = {
   type?: 'positive' | 'negative' | 'info' | 'neutral' | 'warning'
