@@ -5,7 +5,7 @@ import { toast as toastNative, Toaster as ToasterNative } from 'react-hot-toast'
 type SvagToastProps = {
   type?: 'positive' | 'negative' | 'info' | 'neutral' | 'warning'
   position?: ToasterProps['position']
-  duration?: ToastOptions['duration'] | false
+  duration?: ToastOptions['duration']
   message: React.ReactNode
 }
 
@@ -14,14 +14,14 @@ export const createToasterThings = ({
   defaultDuration = 5_000,
 }: {
   defaultPosition?: ToasterProps['position']
-  defaultDuration?: ToastOptions['duration'] | false
+  defaultDuration?: ToastOptions['duration']
 } = {}) => {
   const Toaster = () => {
     return (
       <ToasterNative
         position={defaultPosition}
         toastOptions={{
-          duration: defaultDuration || Infinity,
+          duration: defaultDuration,
           position: defaultPosition,
         }}
       />
@@ -31,7 +31,7 @@ export const createToasterThings = ({
   const toast = ({
     type = 'neutral',
     position = defaultPosition,
-    duration = defaultDuration || Infinity,
+    duration = defaultDuration,
     message,
   }: SvagToastProps) => {
     return toastNative.custom(
@@ -40,7 +40,7 @@ export const createToasterThings = ({
       </div>,
       {
         position,
-        duration: duration || Infinity,
+        duration: duration,
       }
     )
   }
