@@ -40,7 +40,7 @@ export const createToasterThings = ({
       </div>,
       {
         position,
-        duration: duration,
+        duration,
       }
     )
   }
