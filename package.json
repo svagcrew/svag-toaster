@@ -1,6 +1,6 @@
 {
   "name": "svag-toaster",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/svagcrew/svag-toaster",
   "repository": {
     "type": "git",
@@ -23,15 +23,21 @@
     "./dist/**/*"
   ],
   "scripts": {
-    "prettify": "svag-prettier prettify",
-    "dev": "svag-ts dev",
-    "watch": "svag-ts watch",
-    "types": "svag-ts types",
     "build": "svag-ts build",
-    "start": "svag-ts start",
+    "dev": "svag-ts dev",
     "lint": "svag-lint lint",
+    "prepare": "husky",
+    "prettify": "svag-prettier prettify",
+    "start": "svag-ts start",
     "test": "svag-jest test",
-    "prepare": "husky"
+    "types": "svag-ts types",
+    "watch": "svag-ts watch"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-hot-toast": "^2.4.1"
+  },
+  "dependencies": {
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
@@ -42,8 +48,8 @@
     "husky": "^9.0.11",
     "jest": "30.0.0-alpha.4",
     "prettier": "^3.2.5",
-    "react-hot-toast": "^2.4.1",
     "react": "^18.3.1",
+    "react-hot-toast": "^2.4.1",
     "rimraf": "^5.0.7",
     "svag-husky": "^0.1.49",
     "svag-jest": "^0.1.39",
@@ -54,10 +60,5 @@
     "tsc-alias": "^1.8.10",
     "typescript": "^5.4.5"
   },
-  "type": "module",
-  "dependencies": {},
-  "peerDependencies": {
-    "react-hot-toast": "^2.4.1",
-    "react": "^18.3.1"
-  }
+  "type": "module"
 }
