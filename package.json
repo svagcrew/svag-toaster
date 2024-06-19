@@ -42,6 +42,7 @@
     "husky": "^9.0.11",
     "jest": "30.0.0-alpha.4",
     "prettier": "^3.2.5",
+    "react-hot-toast": "^2.4.1",
     "react": "^18.3.1",
     "rimraf": "^5.0.7",
     "svag-husky": "^0.1.49",
@@ -54,10 +55,9 @@
     "typescript": "^5.4.5"
   },
   "type": "module",
-  "dependencies": {
-    "react-hot-toast": "^2.4.1"
-  },
+  "dependencies": {},
   "peerDependencies": {
+    "react-hot-toast": "^2.4.1",
     "react": "^18.3.1"
   }
 }
