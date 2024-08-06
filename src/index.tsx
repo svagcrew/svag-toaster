@@ -40,7 +40,7 @@ export const createToasterThings = ({
     render = defaultRender,
   }: SvagToastProps) => {
     if (!message) {
-      return undefined
+      return null
     }
     if (render) {
       return toastNative.custom(
